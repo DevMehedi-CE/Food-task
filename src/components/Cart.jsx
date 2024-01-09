@@ -5,7 +5,7 @@ import { BsCart3 } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
 const Cart = () => {
-  const [activeCart, setActiveCart] = useState(true);
+  const [activeCart, setActiveCart] = useState(false);
   const cartItem = useSelector((state) => state.cart.cart);
   const totalQty = cartItem.reduce((totalQty,item)=>totalQty + item.qty,0)
   const totalPrice = cartItem.reduce((total,item)=>total+item.qty*item.price,0)
